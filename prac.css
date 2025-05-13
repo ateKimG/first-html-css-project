@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+section{
+    display: table-cell;
+    width: 100%;
+}
+
+.left{
+    float: left;
+    margin: 20px;
+    width: 30%;
+    border: 1px solid red;
+}
+
+.right{
+    float: right;
+    margin: 20px;
+    width: 60%;
+    border: 1px solid black;
+}

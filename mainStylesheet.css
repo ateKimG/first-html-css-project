@@ -1,0 +1,420 @@
+@charset "utf-8";
+
+body{
+    background-color: #aaaaaa ;
+    background-image: url(images/Salamin.jpeg);
+    background-attachment: fixed ;
+    background-size: cover;
+    height: 100vh;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+}
+
+div#home{
+    width: 90%;
+}
+main{
+    margin-top: 70px;
+}
+
+nav#menu{
+    background-image: linear-gradient(#58c9d4, #214960);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 2%;
+    text-align: center;
+    font-size: 1em;
+    position: fixed;
+    z-index: 1000;
+    width: 90%;
+    height: 15px;
+    top: 0; /* Ensure it stays at the top of the viewport */
+    transition: top 0.5s;
+}
+
+a#labels{
+    padding: 3em;
+    text-decoration: none;
+}
+
+a#labels:visited{
+    color: #214960;
+}
+
+a#labels:link{
+    color: #f0f8ff;
+}
+
+a#labels:hover{
+    color: #cf3a7d;
+}
+
+article#socials{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    gap: 15px;
+    margin-bottom: 20%;
+}
+
+img#biniLogo{
+    width: 60px; 
+    vertical-align: text-top;
+    margin: -12px;
+}
+
+#logos{
+    width: 40px;
+    padding:15px;
+}
+
+section h1::first-letter{
+    font-size: 1.5em;
+}
+
+section#about h1, section#music h1, section#gallery h1, section#merchandise h1, section#events h1{
+    color: #cf3a7d;
+    font-size: 3em;
+    text-shadow: pink 0px 0px 5px,
+                 #214960 4px 4px 4px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   padding-top: 5px;
+   margin: 0;
+}
+section#music h1, section#gallery h1, section#merchandise h1, section#events h1{
+text-align: center;
+padding: 10px;
+}
+
+section#about, section, #contacts{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #214960;
+    height:fit-content;
+    background-color: #f0f8ffc2;
+    padding: 1.5em;
+    display: grid;
+    margin-left: 0;
+    border-radius: 20px;
+}
+
+section#about h1 + p{
+    text-align: right;
+    font-size: 2em;
+}
+
+div.about p{
+    width: 60%;
+    padding-left: 10px;
+    margin: 0%;
+    float: left;
+}
+
+
+div.about img{
+    width: 35%;
+    border-width: 5px;
+    border-color: #cf3a7d;
+    border-radius: 100px;
+    float: right;
+    size-adjust: inherit;
+}
+
+
+a#exclusive{
+    background-color: aliceblue;
+    border-radius: 20px;
+    text-align: center;
+    color: #58c9d4;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a#exclusive:hover{
+    background-color: rgb(222, 239, 253);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.2), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+img#bloomlogo{
+    height: 3%;
+    width: 3%;
+    position: relative;
+    top: 10px;
+    left: -10px;
+    margin: 0;
+}
+
+section#home img#salaminposter{
+    width: 98%;
+}
+.flip-container-wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.flip-container{
+    width: 240px;
+    height: 290px;
+    border-radius: 30px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.flipper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper{
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front, .back{
+    background-color: #214960;
+    color: aliceblue;
+    width: 240px;
+    height: 290px;
+    border-radius: 30px;
+    
+}
+.front{
+    z-index: 2;
+}
+
+.back{
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+div.back-content{
+    margin: 10px;
+    padding-top: 8px;
+}
+
+.gallery-discography, .music {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: scroll;
+}
+
+.youtube {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    margin: 5px;
+    border: 1px solid #ccc;
+    width: 500px;
+}
+
+.slide iframe {
+    width: 100%;
+    height: 350px; 
+}
+
+#gallery {
+    padding: 20px;
+}
+
+#gallery h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 90vw;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    opacity: 0.8;
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Calendar Styles */
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    width: 90vw;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.calendar-day {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-day h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.calendar-event {
+    background-color: #58c9d4 ;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+h2#months {
+    font-size: 1.5em;
+    text-align: center;
+    text-shadow: pink 0px 0px 5px,
+        #214960 4px 4px 4px;
+}
+
+div#events-cal{
+    border: #214960 2px solid;
+}
+
+/*For Responsive Design */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .calendar-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    .calendar-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calendar-day {
+        padding: 10px;
+    }
+}
+
+form#contactForm{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1 1 150px;
+}
+
+fieldset{
+    padding: 20px;
+    border: 1px dashed #214960;
+    border-radius: 10px;
+}
+div#contacts{
+    text-align: center;
+}
+
+#rowForm > input{
+    width:150px;
+}
+
+textarea{
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+}
+footer{
+    padding-top: 0;
+    background-color: #58cad4b6;
+    text-align:center;
+    font-size: 1em;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    box-sizing: border-box; 
+    color: aliceblue;
+}
+

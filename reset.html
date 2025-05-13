@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="resetPassword.css">
+    <script src="prompt.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="reset-password">
+            <h2>Reset Password</h2>
+            <form id="resetForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="oldPW">Old Password:</label>
+                <input type="password" id="oldPW" name="oldPassword" required>
+                
+                <label for="newPW">New Password:</label>
+                <input type="password" id="newPW" name="newPassword" required>
+                
+                <button type="submit" action="example.com">Reset</button>
+                <a href="exclusive.html"><button type="button" id="cancelButton" onclick="exit()">Cancel</button></a>
+                <p id="message"></p>
+            </form>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
